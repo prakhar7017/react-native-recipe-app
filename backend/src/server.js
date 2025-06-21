@@ -5,12 +5,15 @@ import { favoritesTable } from "./db/schema.js";
 import { and, eq } from "drizzle-orm";
 import job from "./config/cron.js";
 import morgan from "morgan";
+import cors from "cors";
 
 const app = express();
 const PORT = ENV.PORT || 5001;
 
 if (ENV.NODE_ENV === "production") job.start();
 
+// Enable CORS for all routes
+app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
 

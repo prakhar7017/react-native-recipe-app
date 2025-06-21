@@ -1,7 +1,7 @@
 import { useSignIn } from '@clerk/clerk-expo';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
-import { View, Text, Platform, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Text, Platform, ScrollView, TouchableOpacity, Alert } from 'react-native'
 import { Image } from 'expo-image';
 import { authStyles } from '../../assets/styles/auth.styles';
 import { KeyboardAvoidingView } from 'react-native';
